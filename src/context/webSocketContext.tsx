@@ -9,6 +9,7 @@ import io, { Socket } from "socket.io-client";
 import { ChatMessage, useConsumer } from "../hooks/useConsumer";
 import { WebSocketMessage, usePublisher } from "../hooks/usePublisher";
 
+
 // Define the context properties with necessary types
 interface WebSocketContextProps {
   sessionId: string;
