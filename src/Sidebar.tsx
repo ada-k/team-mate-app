@@ -92,6 +92,17 @@ const Sidebar: React.FC<SidebarProps> = ({
         <img src={logo} alt="Logo" className="w-8 h-8 mb-2" />
         <h3 className="text-lg font-semibold" style={{ color: "rgba(255, 255, 255, 0.562)" }}>TeamMate</h3>
       </div>
+
+      <button onClick={onCreateSession} 
+      className=" but w-full p-2 bg-blue-500 text-white mb-4"
+      // className={`p-2 mb-2 cursor-pointer ${activeSession === sessionId ? 'bg-blue-300' : 'bg-white'}`}
+      >
+        New Session
+   </button>
+  
+
+
+      
   
       {/* <ul className='but'>
 {sessions.map((sessionId) => (
@@ -121,50 +132,21 @@ const Sidebar: React.FC<SidebarProps> = ({
 ))}
 </ul> */}
 
-
+       <ul>
+         {sessions.map((sessionId) => (
+          <li
+            key={sessionId}
+            // onClick={() => onSessionClick(sessionId)}
+            className={` but p-2 mb-2 cursor-pointer ${activeSession === sessionId ? 'bg-blue-300' : 'bg-white'}`}
+          >
+            {sessionId}
+          </li>
+        ))}
+      </ul>
 
       
     </div>
   );
 };
-
-
-
-
 export default Sidebar;
 
-
-
-
-
-// import React from 'react';
-
-// interface SidebarProps {
-//   sessions: string[];
-//   activeSession: string | null;
-//   onSessionClick: (sessionId: string) => void;
-//   onCreateSession: () => void;
-// }
-
-// const Sidebar: React.FC<SidebarProps> = ({ sessions, activeSession, onSessionClick, onCreateSession }) => {
-//   return (
-//     <div className="sidebar w-1/6 bg-gray-200 p-4">
-//       <button onClick={onCreateSession} className="w-full p-2 bg-blue-500 text-white mb-4">
-//         Create New Session
-//       </button>
-//       <ul>
-//         {sessions.map((sessionId) => (
-//           <li
-//             key={sessionId}
-//             onClick={() => onSessionClick(sessionId)}
-//             className={`p-2 mb-2 cursor-pointer ${activeSession === sessionId ? 'bg-blue-300' : 'bg-white'}`}
-//           >
-//             {sessionId}
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default Sidebar;
