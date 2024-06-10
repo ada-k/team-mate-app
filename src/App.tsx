@@ -4,6 +4,7 @@ import { ChatMessage } from './hooks/useConsumer';
 import useWebSocket from './hooks/useWebSocket';
 import Sidebar from './Sidebar';
 import copyIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/copy.png'; 
+import recordIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/record.jpg';
 
 
 function App() {
@@ -222,18 +223,22 @@ return (
 
 {!isRecording ? 
 (
-  <button onClick={startRecording}
-  className="flex-auto"
-  style={{ 
-    backgroundColor: "red",
-      width: "10%" , 
-      color: "rgba(255, 255, 255, 0.562)", 
-      fontSize: "15px",
-    borderColor: "red",
-    padding: "10px 15px"
-    }}
-  >Record Audio
-  </button>
+  // <button onClick={startRecording}
+    // className="flex-auto"
+  // style={{ 
+  //   backgroundColor: "red",
+  //     width: "10%" , 
+  //     color: "rgba(255, 255, 255, 0.562)", 
+  //     fontSize: "15px",
+
+  //   borderColor: "red",
+  //   padding: "10px 15px"
+  //   }}
+  // >
+  <img src={recordIcon} onClick={startRecording}/>
+  // Record Audio
+
+  // </button>
   
 ) 
 : 
