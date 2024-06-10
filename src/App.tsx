@@ -4,8 +4,9 @@ import { ChatMessage } from './hooks/useConsumer';
 import useWebSocket from './hooks/useWebSocket';
 import Sidebar from './Sidebar';
 import copyIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/copy.png'; 
-import recordIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/record.jpg';
-
+import recordIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/record_.png'
+import stoprecordIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/stoprecord_.png'
+// import sendaudioIcon from '/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/sendaudio.png'
 
 function App() {
   const { sessionId, chatHistory, sendTextMessage, switchSession, sendAudioMessage } = useWebSocket();
@@ -223,27 +224,64 @@ return (
 
 {!isRecording ? 
 (
+  
+
+
   // <button onClick={startRecording}
-    // className="flex-auto"
+  // className="flex-auto"
   // style={{ 
-  //   backgroundColor: "red",
+  //   backgroundColor: "green",
   //     width: "10%" , 
   //     color: "rgba(255, 255, 255, 0.562)", 
   //     fontSize: "15px",
-
   //   borderColor: "red",
   //   padding: "10px 15px"
   //   }}
-  // >
-  <img src={recordIcon} onClick={startRecording}/>
-  // Record Audio
-
+  // >Record Audio
+  
   // </button>
+
+//   <img 
+//   src='/Users/adakibet/cosmology/platform/teammate/team-mate-app/src/img/delete.png' 
+//   alt="Record" 
+//   onClick={startRecording} 
+//   // style={{ 
+//   //   backgroundColor: "green",
+//   //   width: "10%",
+//   //   color: "rgba(255, 255, 255, 0.562)",
+//   //   fontSize: "15px",
+//   //   borderColor: "red",
+//   //   padding: "10px 15px",
+//   //   cursor: "pointer"
+//   // }}
+//  />
+
+ <img src={recordIcon} alt="Save" 
+ style={{ 
+  backgroundColor: "#3e414b7a", 
+  width: "10%", 
+  color: "rgba(255, 255, 255, 0.562)", 
+  fontSize: "15px", 
+  borderColor: "red",
+  padding: "9px 9px"
+}} // Added inline styles
+  onClick={() => startRecording()} />
+
   
 ) 
 : 
 (
-  <button onClick={stopRecording}>Stop Recording</button>
+  // <button onClick={stopRecording}>Stop Recording</button>
+  <img src={stoprecordIcon} alt="Save" 
+  style={{ 
+   backgroundColor: "#3e414b7a", 
+   width: "10%", 
+   color: "rgba(255, 255, 255, 0.562)", 
+   fontSize: "15px", 
+   borderColor: "red",
+   padding: "10px 15px"
+ }} // Added inline styles
+   onClick={() => stopRecording()} />
 )
 }
 
@@ -265,7 +303,29 @@ padding: "10px 15px"
 
 
 {recordedAudio && (
-      <button onClick={handleSendAudio}>Send Audio</button> 
+      <button onClick={handleSendAudio}
+      className="flex-auto"  // Updated button styles
+style={{ 
+backgroundColor: "#3e414b7a",
+  width: "20%" , 
+  color: "rgba(255, 255, 255, 0.562)", 
+  fontSize: "15px",
+borderColor: "red",
+padding: "10px 15px"
+}}
+      
+      >Send Audio</button> 
+
+    //   <img src={sendaudioIcon} alt="Save" 
+    //   style={{ 
+    //    backgroundColor: "#3e414b7a", 
+    //    width: "10%", 
+    //    color: "rgba(255, 255, 255, 0.562)", 
+    //    fontSize: "15px", 
+    //    borderColor: "red",
+    //    padding: "10px 15px"
+    //  }} // Added inline styles
+    //    onClick={() => handleSendAudio()} />
     )}
 
 
