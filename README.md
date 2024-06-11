@@ -73,7 +73,8 @@ This repository is the front end of the agent.
 - Delete session
 - Remove session leakage
 - User accounts
-- activate session rename keys
+- Landing page
+- Audio handling
 - update knowlage base
 - Make search more robust and swicth to vector based
 - Upgrade model? cost vs performance
