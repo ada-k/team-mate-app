@@ -1,3 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+    background-color: #1a1b1e;
+}
+
+.but {
+    background-color: #3e414b46;
+    color: rgba(255, 255, 255, 0.562);
+    font-size: 13px;
+}
+
+.chat-container {
+    @apply w-full h-full;
+    @apply mx-0 my-0;
+    @apply bg-white border border-gray-200 rounded-lg shadow-md;
+    @apply absolute top-0 right-0; 
+    background-color: #1a1b1ee9
+}
+
+.cont {
+    @apply h-full w-full;
+    @apply absolute top-0 right-0;
+}
+
+.side-container {
+    @apply w-1/6 h-full;
+    @apply mx-0 my-0;
+    @apply bg-white border border-gray-200 rounded-lg shadow-md;
+    @apply absolute top-0 right-0; 
+
+}
+
+.button {
+    @apply w-5/6 h-14;
+    @apply mx-0 my-0;
+    @apply bg-white border border-gray-200 rounded-lg shadow-md;
+    @apply absolute bottom-0 right-0;
+    background-color: #3e414b7a;
+    color: rgba(255, 255, 255, 0.562);
+    font-size: 13px;
+
+}
+
+.sidebar {
+    @apply w-1/6 h-full;
+    background-color: #1a1b1e;
+}
+  

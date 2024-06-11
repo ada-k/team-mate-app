@@ -1,6 +1,14 @@
-# Team-Mate App
+# Team-Mate
 
-Team-Mate is an independent company dedicated to helping students and trainees manage their time and focus more effectively. This project demonstrates a personalized LLM-enhanced agent designed to optimize schedules, facilitate collaboration, and provide tailored support for enhanced learning experiences.
+TeamMate is a personalized LLM-enhanced agent. It serves as a supportive digital assistant to help students manage their tasks effectively, facilitate collaboration, and access necessary resources effortlessly.  
+Key Services Provided by Team-Mate:
+- Personalised Interaction: 
+- Adaptive Learning and Support: 
+- Proactive Planning and Scheduling: 
+- Blocker Resolution: 
+- Enhance collaboration: 
+
+This repository is the front end of the agent.
 
 ## Repository Structure
 
@@ -61,17 +69,19 @@ Team-Mate is an independent company dedicated to helping students and trainees m
 
 ## Important Notes
 
-- **Starter Project**: This project provides a basic structure and examples to help you get started. The provided components and hooks are just examples. You are encouraged to modify and extend them according to your needs.
-- **Flexibility**: You are not restricted to the current architecture or the packages used. Feel free to make any modifications to suit your approach to solving the challenge.
-
-## Overview
-
-The provided components and hooks demonstrate how to set up a WebSocket connection and manage chat interactions. The `WebSocketContext` provides context for managing the WebSocket connection and chat state, while `useConsumer` and `usePublisher` hooks handle message consumption and publishing.
-
-## Contributions
-
-We welcome contributions and suggestions! Feel free to fork the repository, make improvements, and submit a pull request.
+**Features in the works**
+- Delete session
+- Remove session leakage
+- User accounts
+- Landing page
+- Audio handling
+- update knowlage base
+- Make search more robust and swicth to vector based
+- Upgrade model? cost vs performance
 
 ## License
 
 This project is licensed under the MIT License.
+
+
+![alt text](__.png)
